@@ -1,0 +1,82 @@
+{
+    "steel_products": [
+        {
+            "name": "BRC 65std",
+            "description": "This is a welded steel mesh made of longitudinal (line wire) and transverse (cross wire) bars welded together for use in reinforcement of foundations during construction.",
+            "price": 15468,
+            "stock": 100,
+            "category_id": 2,
+            "image_url": "/api/products/public/images/brc_65std.jpg"
+        },
+        {
+            "name": "Round 12",
+            "description": "12mm diameter steel reinforcement bar, ideal for concrete reinforcement in construction projects",
+            "price": 1443,
+            "stock": 200,
+            "category_id": 2,
+            "image_url": "/api/products/public/images/round_12.jpg"
+        },
+        {
+            "name": "Tube 2*2*2mm",
+            "description": "Square steel tube with 2x2 inch dimensions and 2mm thickness, perfect for structural and decorative applications",
+            "price": 2258,
+            "stock": 150,
+            "category_id": 2,
+            "image_url": "/api/products/public/images/tube_2x2.jpg"
+        }
+    ],
+    "wood_products": [
+        {
+            "name": "Cyprus Timber",
+            "description": "High-quality cyprus timber, perfect for construction and furniture making",
+            "price": 3500,
+            "stock": 50,
+            "category_id": 2,
+            "image_url": "/api/products/public/images/cyprus_timber.jpg"
+        },
+        {
+            "name": "MDF Board 18mm",
+            "description": "18mm Medium Density Fiberboard, ideal for furniture and interior finishing",
+            "price": 2800,
+            "stock": 75,
+            "category_id": 2,
+            "image_url": "/api/products/public/images/mdf_board.jpg"
+        }
+    ],
+    "cement_products": [
+        {
+            "name": "Portland Cement 42.5N",
+            "description": "High-quality Portland cement for general construction use",
+            "price": 750,
+            "stock": 1000,
+            "category_id": 2,
+            "image_url": "/api/products/public/images/portland_cement.jpg"
+        },
+        {
+            "name": "Rapid Hardening Cement",
+            "description": "Fast-setting cement for projects requiring quick strength development",
+            "price": 850,
+            "stock": 500,
+            "category_id": 2,
+            "image_url": "/api/products/public/images/rapid_cement.jpg"
+        }
+    ],
+    "plumbing_products": [
+        {
+            "name": "PVC Pipe 4-inch",
+            "description": "4-inch diameter PVC pipe for drainage and plumbing applications",
+            "price": 450,
+            "stock": 200,
+            "category_id": 2,
+            "image_url": "/api/products/public/images/pvc_pipe.jpg"
+        },
+        {
+            "name": "Water Tank 1000L",
+            "description": "1000-liter water storage tank with UV protection",
+            "price": 12000,
+            "stock": 20,
+            "category_id": 2,
+            "image_url": "/api/products/public/images/water_tank.jpg"
+        }
+    ]
+}
