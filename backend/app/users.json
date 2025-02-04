@@ -1,9 +1,0 @@
-[
-  {
-    "id": 1,
-    "email": "admin@edhaus.com",
-    "password": "pbkdf2:sha256:600000$SSq7Zdz6pG9Wy0G2$65a3ab15e41e89fdfe67cd9533008b863646ccd264a155be9abe45d9f2e4c865",
-    "name": "Admin",
-    "role": "admin"
-  }
-]

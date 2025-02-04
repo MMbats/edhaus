@@ -1,26 +1,40 @@
-from . import db
+from .. import db
+from .base import BaseModel
 
-class Product(db.Model):
+class Product(BaseModel):
     __tablename__ = 'products'
     
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text)
     price = db.Column(db.Float, nullable=False)
-    stock = db.Column(db.Integer, nullable=False, default=0)
-    image_url = db.Column(db.String(500))
+    stock = db.Column(db.Integer, default=0)
+    image_url = db.Column(db.String(255))
     category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
+    slug = db.Column(db.String(100), unique=True, nullable=False)
+    is_active = db.Column(db.Boolean, default=True)
     
-    # Relationships
-    category = db.relationship('Category', back_populates='products')
-
-class Category(db.Model):
-    __tablename__ = 'categories'
+    def __repr__(self):
+        return f'<Product {self.name}>'
     
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=False, unique=True)
-    description = db.Column(db.Text)
-    image_url = db.Column(db.String(500))
-    
-    # Relationships
-    products = db.relationship('Product', back_populates='category', lazy='dynamic')
+    def to_dict(self):
+        from .category import Category
+        category = Category.query.get(self.category_id)
+        return {
+            'id': self.id,
+            'name': self.name,
+            'description': self.description,
+            'price': self.price,
+            'stock': self.stock,
+            'image_url': self.image_url,
+            'category_id': self.category_id,
+            'slug': self.slug,
+            'is_active': self.is_active,
+            'created_at': self.created_at.isoformat() if self.created_at else None,
+            'updated_at': self.updated_at.isoformat() if self.updated_at else None,
+            'category': {
+                'id': category.id,
+                'name': category.name,
+                'slug': category.slug
+            } if category else None
+        }
